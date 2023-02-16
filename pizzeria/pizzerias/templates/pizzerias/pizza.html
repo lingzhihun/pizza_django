@@ -7,7 +7,15 @@
 <body>
     {% extends "pizzerias/base.html" %}
     {% block content %}
-    <p>欢迎来到披萨世界</p>
+    <p> Pizza: </p>
+    <ul>
+      {% for pizza in pizzas %}
+        <li>{{pizza}}</li>
+      {% empty%}
+        <li>没有添加披萨</li>
+      {% endfor %}
+    </ul>
     {% endblock content %}
+
 </body>
 </html>
